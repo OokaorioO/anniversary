@@ -1,0 +1,46 @@
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+.timer {
+  font-weight: bold;
+  font-size: 24px;
+  text-align: center;
+}
+.timer span {
+  font-size: 72px;
+}
+body {
+  /* background-color: aqua; */
+  /* background-image: url(img/20190711_01.jpg); */
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  background-size: cover;
+}
+.main-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  /* margin-top: 235px; */
+  background-color: rgba(255, 255, 255, 0.288);
+  /* height: 100%;
+  width: 100%; */
+  font-size: 45px;
+  color: dodgerblue;
+}
+/* h1 {
+  font-size: 70px;
+  color: goldenrod;
+}
+h2 {
+  color: gold;
+  font-size: 70px;
+} */
+h1,
+h2 {
+  text-shadow: white 1px 1px 0px, white -1px -1px 0px, white -1px -1px 0px,
+    white -1px -1px 0px;
+}

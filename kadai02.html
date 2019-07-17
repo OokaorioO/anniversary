@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>ANNIVERSARY countdown！！</title>
+    <link rel="stylesheet" href="style.css" />
+    <!-- <script src="js/p5.min.js"></script>
+    <script src="sketch.js"></script> -->
+  </head>
+
+  <body>
+    <div class="main-wrapper">
+      <script src="js/p5.min.js"></script>
+      <script src="sketch.js"></script>
+      <div id="canvas"></div>
+      <div style="position: absolute;">
+        <!-- <div style="top: 1500px; position: absolute;"> -->
+        <h2>G's FUKUOKA1周年パーティー開催まで</h2>
+        <!-- </div>
+      <div> -->
+        <h1 id="timer">
+          あと<span id="day"></span>日<span id="hour"></span>時間<span
+            id="min"
+          ></span
+          >分<span id="sec"></span>秒
+        </h1>
+      </div>
+    </div>
+    <script>
+      // ここにjavascriptの処理を記述しよう！
+      // const date = new Date("2019/07/28");
+      // date.setMonth(date.getMonth() - 1);
+      // date.setDate(date.getDate() + 60);
+
+      var countdown = function(due) {
+        var now = new Date();
+
+        var rest = due.getTime() - now.getTime();
+        var sec = Math.floor(rest / 1000) % 60;
+        var min = Math.floor(rest / 1000 / 60) % 60;
+        var hours = Math.floor(rest / 1000 / 60 / 60) % 24;
+        var days = Math.floor(rest / 1000 / 60 / 60 / 24);
+        var count = [days, hours, min, sec];
+
+        return count;
+      };
+
+      var goal = new Date(2019, 6, 28, 13, 0); //なぜか１ヶ月ズレる。
+
+      var recalc = function() {
+        var counter = countdown(goal);
+        document.getElementById("day").textContent = counter[0];
+        document.getElementById("hour").textContent = counter[1];
+        document.getElementById("min").textContent = counter[2];
+        document.getElementById("sec").textContent = counter[3];
+        refresh();
+      };
+
+      var refresh = function() {
+        setTimeout(recalc, 1000);
+      };
+      recalc();
+    </script>
+  </body>
+</html>
