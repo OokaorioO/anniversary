@@ -2,6 +2,7 @@ html,
 body {
   width: 100%;
   height: 100%;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 .timer {
   font-weight: bold;
@@ -43,4 +44,19 @@ h1,
 h2 {
   text-shadow: white 1px 1px 0px, white -1px -1px 0px, white -1px -1px 0px,
     white -1px -1px 0px;
+}
+
+.text01{
+  font-size: 100px;
+  color: goldenrod;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-around;
+}
+p{
+   color: #DA8E00;
+  background: -webkit-linear-gradient(-45deg, #F7DE05, #DA8E00, #EDAC06, #F7DE05, #ECB802, #DAAF08, #B67B03, #DA8E00, #EDAC06, #F7DE05, #ECB802, #EDAC06);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  /* 文字をグラデーションにする */
 }
