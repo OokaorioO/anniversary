@@ -21,14 +21,14 @@ function draw() {
   fill(
     color(
       "hsla(" +
-        ceil(random(360)) +
-        "," +
-        (ceil(random(50)) + 50) +
-        "%," +
-        ceil(random(50)) +
-        "%," +
-        ceil(random(90)) * 0.01 +
-        ")"
+      ceil(random(360)) +
+      "," +
+      (ceil(random(50)) + 50) +
+      "%," +
+      ceil(random(50)) +
+      "%," +
+      ceil(random(90)) * 0.01 +
+      ")"
     )
   );
 
@@ -49,7 +49,7 @@ function draw() {
 function r(theta, a, b, m, n1, n2, n3) {
   return pow(
     pow(abs(cos((m * theta) / 4.0) / a), n2) +
-      pow(abs(sin((m * theta) / 4.0) / b), n3),
+    pow(abs(sin((m * theta) / 4.0) / b), n3),
     -1.0 / n1
   );
 }
